@@ -208,7 +208,7 @@
     <div class="abstract">
       <h1 class="title is-3" style="font-size: 2.1em; font-weight: bold; margin-bottom: 20px; text-align: center;">Abstract</h1>
       <div style="text-align: justify">
-        <p>Existing 3D head avatar reconstruction methods typically follow a two-stage pipeline, relying on tracked FLAME meshes derived from facial landmarks, followed by Gaussian-based rendering. However, the inevitable geometric misalignment between the meshes and target images often degrades rendering quality and suppresses fine details. In this paper, we propose MoGaFace, a novel framework that jointly refines geometry and texture during Gaussian rendering. Specifically, we introduce Momentum-Guided Consistent Geometry, which leverages a momentum-updated expression bank and an expression-aware correction mechanism to mitigate geometry–image misalignment and enforce multi-view consistency. In addition, we propose Latent Texture Attention, which encodes compact multi-view cues into head-aware representations, enabling geometry-aware texture refinement via integration into ellipsoidal Gaussian primitives. Extensive experiments show that MoGaFace achieves high-fidelity head avatar reconstruction and significantly improves novel-view synthesis quality, even under inaccurate mesh initialization and unconstrained real-world.</p>
+        <p>Existing 3D head avatar reconstruction methods typically follow a two-stage pipeline, relying on tracked FLAME meshes from facial landmarks, followed by Gaussian-based rendering. However, geometric misalignment between the meshes and target images degrades rendering quality and suppresses fine details. In this paper, we propose MoGaFace, a framework that jointly refines geometry and texture during Gaussian rendering. Specifically, we introduce Momentum-Guided Consistent Geometry, which leverages a momentum-updated expression bank and an expression-aware correction mechanism to mitigate geometry–image misalignment and enforce multi-view consistency. In addition, we propose Latent-Guided Texture Attention, which encodes compact multi-view cues into head-aware representations, enabling geometry-aware texture refinement via integration into Gaussians. Extensive experiments show that MoGaFace achieves high-fidelity head avatar reconstruction and improves novel-view synthesis quality, even under inaccurate mesh initialization and unconstrained real-world scenarios.</p>
       </div>
     </div>
   </div>
@@ -220,7 +220,7 @@
       <h1 class="title is-3" style="font-size: 2.1em; font-weight: bold; margin-bottom: 20px; margin-top: 30px; text-align: center;">Overall Framework</h1>
       <img src="./static/images/pipline.png" alt="Audiodynamic Image" style="width: 100%; height: auto;">
       <h2 class="text-align: justify" style="width: 100%; text-align: justify; margin-top: 3px; margin-bottom: 20px;"> 
-        Given multi-view images, MoGaFace initializes FLAME via tracking, refines expressions through a Momentum-Guided Geometry module for consistent and accurate fitting, and embeds 3D Gaussian textures using a Latent Texture Attention module that exploits multi-view texture cues.
+        Given multi-view images, MoGaFace initializes FLAME via tracking, refines expressions with a Momentum-Guided Consistent Geometry for consistency, and embeds 3D Gaussian textures via Latent-Guided Texture Attention using multi-view cues.
       </h2>
     </div>
   </div>
